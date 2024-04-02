@@ -1,0 +1,307 @@
+body
+{
+    background-color: rgb(230, 235, 240);
+    box-sizing:border-box;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board
+{
+    background-color: rgb(250, 250, 250);
+    width: 80%;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow:0px 3px 20px #5d666d34;
+    
+}
+
+.doing
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:10px 5px;
+    padding: 7px 5px;
+    background-color: rgb(229, 234, 240);
+    border-radius: 20px;
+    position: relative;
+    box-shadow:0px 3px 7px #5d666d34;
+}
+
+.doing span
+{
+    background-color: rgb(247, 245, 245);
+    padding: 2px 10px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    box-shadow:0px 3px 7px #5d666d34;
+}
+
+.doing #do-dimentions
+{
+    top: 5px;
+    text-align: center;
+    padding-bottom:5px ;
+}
+.doing #do-title
+{
+    margin-right: auto;
+}
+
+.doing #do-times
+{
+    margin-right: 15%;
+}
+
+/* delete button */
+.deletebtn
+{
+    display: none;
+    border: 0;
+    outline:0;
+    background-color: #f56f7a;
+    border-radius: 20px;
+    font-size: 17px;
+    color:whitesmoke;
+    box-shadow:0px 3px 7px #5d666d34;
+    cursor: pointer;
+    padding: 0px 0px;
+    transition: 0.1s;
+}
+.doing .deletebtn:hover
+{
+    background-color: #ec606b;
+    transition: 0.1s;
+}
+
+.delactive
+{
+    display: block;
+    transition: 0.1s;
+    padding: 0px 10px;
+    margin-left: 10px;
+    animation: animation 0.2s ease;
+}
+
+@keyframes animation {
+    0%
+    {
+        opacity: 0;
+        padding: 0px 0px;
+    }
+    100%
+    {
+        opacity: 100;
+        padding: 0px 10px;
+    }
+}
+
+/* confirm button*/
+.control-btn .confirm
+{
+    display: none;
+    border: 0;
+    outline:0;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    padding: 7px 25px;
+    background-color: #4ce7a7;
+    border-radius: 20px;
+    font-size: 17px;
+    margin-right: 15px;
+    color:whitesmoke;
+    box-shadow:0px 3px 7px #5d666d34;
+    cursor: pointer;
+    transition: 0.1s; 
+}
+
+.control-btn .confirmactive 
+{
+    display: inline;
+}
+
+
+/* edits and new button */
+.control-btn #new-do , .edits
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 0;
+    outline:0;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    padding: 7px 25px;
+    background-color: #7fb2fd;
+    border-radius: 20px;
+    font-size: 17px;
+    margin-right: 15px;
+    color:whitesmoke;
+    box-shadow:0px 3px 7px #5d666d34;
+    cursor: pointer;
+    transition: 0.1s;
+    
+}
+
+.control-btn #new-do:hover , .edits:hover
+{
+    background-color: #75a7f1;
+    transition: 0.1s;
+}
+.editactive
+{
+    background-color: #677df8;
+}
+.editactive:hover
+{
+    background-color: #6075ec;
+}
+
+
+.active 
+{
+    filter: blur(20px);
+}
+.blur
+{
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(5px) brightness(90%);
+}
+/* modals */
+.new-board
+{
+    position: absolute;
+    background-color: rgb(250, 250, 250);
+    padding: 50px 30px;
+    font-size: 18px;
+    width: 500px;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow:0px 3px 20px #5d666d3d;
+    transition: 0.5s;
+}
+#submit-new
+{
+    width: 95%;
+    border: 0;
+    outline: 0;
+    padding: 10px 0px;
+    background-color:  #7fb2fd;
+    border-radius: 20px;
+    font-size: 18px;
+    color: white;
+    box-shadow:0px 3px 10px #5d666d62;
+    margin: 70px 0px; 
+    cursor: pointer;
+}
+.new-board label
+{
+    display: block;
+}
+
+
+.new-board input
+{
+    margin: 15px 0px;
+    width: 90%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    box-shadow:0px 3px 7px #5d666d34;
+    background-color: #ffffff;
+}
+
+.new-board input[type=time] 
+{
+
+    width: 42.5%;
+}
+
+#error
+{
+	border-radius: 20px;
+	color: #ffdae5;
+	background-color: #EB455F;
+}
+
+/*dimantions theme*/
+.doing .primary
+{
+    background-color: #6ba6ff;
+    color: whitesmoke;
+}
+
+.doing .hobby
+{
+    background-color: #51e09d;
+    color: whitesmoke;
+}
+.doing .importance
+{
+    background-color: #9f6ff8;
+    color: whitesmoke;
+}
+
+.exitdo
+{
+    top: 6%;
+    right: 5%;
+    position: absolute;
+    border: 0;
+    outline:0;
+    background-color: #f56f7a;
+    border-radius: 20px;
+    font-size: 17px;
+    color:whitesmoke;
+    box-shadow:0px 3px 7px #5d666d34;
+    cursor: pointer;
+    padding: 5px 11px;
+    transition: 0.1s;
+}
+.exitdo:hover
+{
+    background-color: #f05b67;
+}
+
+/* ceckbox */
+
+
+.checkbox
+{
+    position: relative;
+    cursor: pointer;
+    width: 35px;
+    height: 25px;
+    border-radius: 30px;
+}
+
+.checkbox .ceckbox-input
+{
+    transition: 0.3s;
+    cursor: pointer;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 20px;
+    box-shadow:0px 3px 7px #5d666d34;
+}
+
+.ceckbox-input:checked
+{
+    transition: 0.3s;
+    background-color: #94cdf8;
+    box-shadow:0px 3px 7px #5d666d34;
+}

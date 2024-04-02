@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0 , height=device-height ">
+        <title>todo list</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="board" id="maincontent-board">
+
+            <!-- button and controler -->
+            <div class="control-btn">
+                
+                <button id="new-do" onclick="">new +</button>
+                <button id="edit-do" class="edits">edit</button>
+                <button id="confirmedit" class="confirm">confirm</button>
+
+                <!-- theme changer soon as created-->
+
+            </div>
+
+
+            <div class="doing-chart" id="chartdo">
+                
+                <!-- do template -->
+                <div class="doing">
+                    <label class="checkbox" id="do-check">
+                        <input type="checkbox" class="ceckbox-input"></input>
+                    </label>
+                    <span id="do-title">cuty todo lists (^.^)</span>
+                    <span id="do-times">10:25 , 12:00</span> 
+                    <span id="do-dimentions" class="primary">primary</span>
+                    <button id="delbtn" class="deletebtn">x</button>
+                </div> 
+                <!-- java script append here -->
+				
+
+            </div>
+        </div>
+
+
+        <!-- new do create box here -->
+
+        <!-- <div class="blur" id="blr"></div> -->
+        <div class="new-board" id="newdoing">
+            <button id="exitnewdo" class="exitdo">x</button>
+            <form action="">
+                <label for="">do title</label>
+
+                <input type="text" placeholder="titles ^.^" id="titleinput" required>
+
+                <label for="">times of doing this</label>
+
+                <input type="time" id="timesinput01">
+                <input type="time" id="timesinput02">
+
+                <label for="">dimantions</label>
+
+                <input list="dimantions" id="diminput">
+
+                <datalist id="dimantions">
+                    <option value="primary"></option>
+                    <option value="hobby"></option>
+                    <option value="importance"></option>
+                </datalist>
+                <span id="error"></span>
+            </form>
+            <button id="submit-new">submit</button>
+        </div>
+
+
+
+
+
+        <!-- javascript code excuted -->
+        <script src="script.js"></script>
+    </body>
+</html>
